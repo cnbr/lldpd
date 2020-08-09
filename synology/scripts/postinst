@@ -1,0 +1,8 @@
+#!/bin/sh
+# Copyright (C) 2000-2016 Synology Inc. All rights reserved.
+
+ln -sf "$SYNOPKG_PKGDEST/usr/local/sbin/lldpd" /usr/sbin/lldpd
+ln -sf "$SYNOPKG_PKGDEST/usr/local/sbin/lldpctl" /usr/sbin/lldpctl
+ln -sf "$SYNOPKG_PKGDEST/usr/local/sbin/lldpcli" /usr/sbin/lldpcli
+ln -sf "$SYNOPKG_PKGDEST/usr/local/lib/liblldpctl.so.4" /lib/liblldpctl.so.4
+ln -sf "$SYNOPKG_PKGDEST/usr/local/lib/liblldpctl.so" /lib/liblldpctl.so

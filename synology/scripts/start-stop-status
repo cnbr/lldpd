@@ -1,0 +1,26 @@
+#!/bin/sh
+# Copyright (C) 2000-2016 Synology Inc. All rights reserved.
+
+
+case $1 in
+	start)
+		if [ -h "/usr/sbin/lldpd" ]; then
+			/usr/sbin/lldpd
+			a=`uname -u ` b=`uname -srvm` ; /usr/sbin/lldpcli configure system description "$(echo -n "$a $b")"
+			/usr/sbin/lldpcli resume
+		fi	
+	;;
+	stop)
+		pkill -f /usr/sbin/lldpd 
+	;;
+	status)
+		pidof -s lldpd >/dev/null 2>&1
+	;;
+	killall)
+          stop		 
+        ;;
+	log)
+		exit 0
+	;;
+esac
+
