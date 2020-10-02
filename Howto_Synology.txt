@@ -1,0 +1,6 @@
+follow the Synology Developer Guide to install the Bulding Environment (https://help.synology.com/developer-guide/getting_started/index.html).
+Check, that the hardware platform and DSM version that it fits your environment.
+
+Testing the installation with the tmux or nmap example in the toolkit would be helpful to understand the building process.
+
+If it works, clone the lldpd to toolkit/source/ and start the building process, see https://help.synology.com/developer-guide/create_package/build_and_create_package.html
